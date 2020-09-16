@@ -71,7 +71,7 @@ Person.prototype.toString = function() {
 /*
   * TASK 2
   * FINISHED
-  * passes all tests
+  >> passes all tests
     - Write a Car constructor that initializes `model` and `milesPerGallon` from arguments.
     - All instances built with Car:
         + should initialize with an `tank` at 0
@@ -112,7 +112,7 @@ Car.prototype.drive = function(distance) {
 /*
   * TASK 3
   * FINISHED
-  * passes all tests
+  >> Passes all tests
     - Write a Baby constructor subclassing Person.
     - Besides `name` and `age`, Baby takes a third argument to initialize `favoriteToy`.
     - Besides the methods on Person.prototype, babies have the ability to `.play()`:
