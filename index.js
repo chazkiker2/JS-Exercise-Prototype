@@ -1,5 +1,7 @@
+'use strict';
+
 /*
-  EXAMPLE TASK:
+  * EXAMPLE TASK:
     - Write an Airplane constructor that initializes `name` from an argument.
     - All airplanes built with Airplane should initialize with an `isFlying` of false.
     - Give airplanes the ability to `.takeOff()` and `.land()`:
@@ -21,21 +23,23 @@ Airplane.prototype.land = function () {
 
 
 /*
-// 👇 COMPLETE YOUR WORK BELOW 👇
-// 👇 COMPLETE YOUR WORK BELOW 👇
-// 👇 COMPLETE YOUR WORK BELOW 👇
+* 👇 COMPLETE YOUR WORK BELOW 👇
+* 👇 COMPLETE YOUR WORK BELOW 👇
+* 👇 COMPLETE YOUR WORK BELOW 👇
 */
 
 /*
-  TASK 1
-    - Write a Person Constructor that initializes `name` and `age` from arguments.
-    - All instances of Person should initialize with an empty `stomach` array.
-    - Give instances of Person the ability to `.eat("someFood")`:
-        + When eating an edible, it should be pushed into the `stomach`.
-        + The `eat` method should have no effect if there are 10 items in the `stomach`.
-    - Give instances of Person the ability to `.poop()`:
+  * TASK 1
+  TODO: THIS METHOD IS UNFINISHED
+  ! UNNFINISHED
+    ? Write a Person Constructor that initializes `name` and `age` from arguments.
+    ? All instances of Person should initialize with an empty `stomach` array.
+    ? Give instances of Person the ability to `.eat("someFood")`:
+        - When eating an edible, it should be pushed into the `stomach`.
+        - The `eat` method should have no effect if there are 10 items in the `stomach`.
+    ? Give instances of Person the ability to `.poop()`:
         + When an instance poops, its `stomach` should empty.
-    - Give instances of Person a method `.toString()`:
+    ? Give instances of Person a method `.toString()`:
         + It should return a string with `name` and `age`. Example: "Mary, 50"
 */
 
@@ -44,7 +48,9 @@ function Person() {
 }
 
 /*
-  TASK 2
+  * TASK 2
+  TODO: THIS METHOD IS UNFINISHED
+  ! UNFINISHED
     - Write a Car constructor that initializes `model` and `milesPerGallon` from arguments.
     - All instances built with Car:
         + should initialize with an `tank` at 0
@@ -62,7 +68,9 @@ function Car() {
 }
 
 /*
-  TASK 3
+  * TASK 3
+  TODO: THIS METHOD IS UNFINISHED
+  ! UNNFINISHED
     - Write a Baby constructor subclassing Person.
     - Besides `name` and `age`, Baby takes a third argument to initialize `favoriteToy`.
     - Besides the methods on Person.prototype, babies have the ability to `.play()`:
@@ -73,9 +81,12 @@ function Baby() {
 }
 
 /* 
-  TASK 4
+  * TASK 4
+  TODO: THIS METHOD IS UNNFINISHED
+  ! UNNFINISHED
+  TODO: Explain prompt below
 
-  In your own words explain the four principles for the "this" keyword below:
+  ?In your own words explain the four principles for the "this" keyword below:
   1. 
   2. 
   3. 
@@ -83,9 +94,9 @@ function Baby() {
 */
 
 
-///////// END OF CHALLENGE /////////
-///////// END OF CHALLENGE /////////
-///////// END OF CHALLENGE /////////
+//* /////// END OF CHALLENGE /////////
+//* /////// END OF CHALLENGE /////////
+//* /////// END OF CHALLENGE /////////
 if (typeof exports !== 'undefined') {
   module.exports = module.exports || {}
   if (Airplane) { module.exports.Airplane = Airplane }
