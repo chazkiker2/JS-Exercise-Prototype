@@ -105,7 +105,7 @@ describe('Instances of Car', () => {
     expect(batmobile.tank).to.equal(20)
   })
   it('STRETCH: drive method when enough fuel increases odometer correctly', () => {
-    batmobile.fill(10)
+    batmobile.fill(10) 
     batmobile.drive(50)
     expect(batmobile.odometer).to.equal(50)
   })

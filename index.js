@@ -28,18 +28,19 @@ Airplane.prototype.land = function () {
 * 👇 COMPLETE YOUR WORK BELOW 👇
 */
 
+
 /*
   * TASK 1
-  TODO: REFACTOR THIS METHOD TO USE PROTOTYPES
-  ! PARTIALLY FINISHED
-    ? Write a Person Constructor that initializes `name` and `age` from arguments.
-    ? All instances of Person should initialize with an empty `stomach` array.
-    ? Give instances of Person the ability to `.eat("someFood")`:
+  * FINISHED
+  >> Passes all tests
+    - Write a Person Constructor that initializes `name` and `age` from arguments.
+    - All instances of Person should initialize with an empty `stomach` array.
+    - Give instances of Person the ability to `.eat("someFood")`:
         - When eating an edible, it should be pushed into the `stomach`.
         - The `eat` method should have no effect if there are 10 items in the `stomach`.
-    ? Give instances of Person the ability to `.poop()`:
+    - Give instances of Person the ability to `.poop()`:
         + When an instance poops, its `stomach` should empty.
-    ? Give instances of Person a method `.toString()`:
+    - Give instances of Person a method `.toString()`:
         + It should return a string with `name` and `age`. Example: "Mary, 50"
 */
 
@@ -66,8 +67,6 @@ Person.prototype.toString = function() {
   return `${this.name}, ${this.age}`;
 };
 
-// const person1 = new Person("Sam", 24);
-
 
 /*
   * TASK 2
@@ -85,9 +84,28 @@ Person.prototype.toString = function() {
         + The `drive` method should return a string "I ran out of fuel at x miles!" x being `odometer`.
 */
 
-function Car() {
-
+function Car(model, milesPerGallon) {
+  this.model = model;
+  this.milesPerGallon = milesPerGallon;
+  this.tank = 0;
+  this.odometer = 0;
 }
+Car.prototype.fill = function(gallons) {
+  this.tank += gallons;
+};
+Car.prototype.drive = function(distance) {
+  const fuelUsed = this.milesPerGallon * distance;
+  if (this.tank >= fuelUsed) {
+    this.tank = this.tank - fuelUsed;
+    this.odometer += distance;
+  } else {
+    const distanceDriven = this.milesPerGallon * this.tank;
+    this.tank = 0;
+    this.odometer += distanceDriven;
+    return `I ran out of fuel at ${this.odometer} miles!`;
+    
+  }
+};
 
 /*
   * TASK 3
