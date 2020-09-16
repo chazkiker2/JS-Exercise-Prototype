@@ -70,8 +70,8 @@ Person.prototype.toString = function() {
 
 /*
   * TASK 2
-  TODO: THIS METHOD IS UNFINISHED
-  ! UNFINISHED
+  * FINISHED
+  * passes all tests
     - Write a Car constructor that initializes `model` and `milesPerGallon` from arguments.
     - All instances built with Car:
         + should initialize with an `tank` at 0
@@ -106,41 +106,28 @@ Car.prototype.drive = function(distance) {
     
   }
 };
-// let batmobile = new Car('BatMobile', 20);
-// console.log(batmobile);
-// console.log(batmobile.model);
-// console.log(batmobile.milesPerGallon);
-// console.log(batmobile.tank);
-// console.log(batmobile.odometer);
-// batmobile.fill(10);
-// console.log(batmobile.tank);
-// batmobile.fill(10);
-// console.log(batmobile.tank);
-// batmobile.fill(10);
-// console.log(batmobile.tank);
-// batmobile.drive(50);
-// console.log(batmobile.odometer);
-// // batmobile.fill(10);
-// batmobile.tank = 10;
-// console.log(batmobile.tank);
-// batmobile.drive(100);
-// console.log(batmobile.tank);
-
 
 
 
 /*
   * TASK 3
-  TODO: THIS METHOD IS UNFINISHED
-  ! UNNFINISHED
+  * FINISHED
+  * passes all tests
     - Write a Baby constructor subclassing Person.
     - Besides `name` and `age`, Baby takes a third argument to initialize `favoriteToy`.
     - Besides the methods on Person.prototype, babies have the ability to `.play()`:
         + Should return a string "Playing with x", x being the favorite toy.
 */
-function Baby() {
-
+function Baby(name, age, favoriteToy) {
+  Person.call(this, name, age);
+  this.favoriteToy = favoriteToy;
 }
+
+Baby.prototype = Object.create(Person.prototype);
+
+Baby.prototype.play = function() {
+  return `Playing with ${this.favoriteToy}`;
+};
 
 /* 
   * TASK 4
