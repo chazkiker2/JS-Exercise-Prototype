@@ -47,23 +47,24 @@ function Person(name, age) {
   this.name = name;
   this.age = age;
   this.stomach = [];
-  this.eat = function(someFood){
-    if (this.stomach.length < 10) {
-      this.stomach.push(someFood);
-      return true;
-    } else {
-      return false;
-    }
-  };
-  this.poop = function() {
-    while (this.stomach.length > 0) {
-      this.stomach.pop();
-    }
-  };
-  this.toString = function() {
-    return `${this.name}, ${this.age}`;
-  };
 }
+
+Person.prototype.eat = function(someFood) {
+  if (this.stomach.length < 10) {
+    this.stomach.push(someFood);
+    return true;
+  } else {
+    return false;
+  }
+};
+Person.prototype.poop = function() {
+  while (this.stomach.length > 0) {
+    this.stomach.pop();
+  }
+};
+Person.prototype.toString = function() {
+  return `${this.name}, ${this.age}`;
+};
 
 // const person1 = new Person("Sam", 24);
 
