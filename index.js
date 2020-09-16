@@ -131,15 +131,24 @@ Baby.prototype.play = function() {
 
 /* 
   * TASK 4
-  TODO: THIS METHOD IS UNNFINISHED
-  ! UNNFINISHED
-  TODO: Explain prompt below
+  * FINISHED
 
-  ?In your own words explain the four principles for the "this" keyword below:
-  1. 
-  2. 
-  3. 
-  4. 
+  ? In your own words explain the four principles for the "this" keyword below:
+
+  1. In the global scope, the value of "this" refers to the base object —— either window or console, depending 
+  on whether the developer is working in the browser environment or node environment. (window for browser, console for node)
+  
+  2. Implicit binding makes up for 80% of "this" keyword use cases. Whenever a function is invoked by way of the dot 
+  operator, "this" keyword refers to the object prededing the dot. <object>.<method_name> —— the object is "this" and 
+  the specified method is called by "this" object. 
+  
+  3. When the "new" keyword is utilized to invoke a constructor function, "this" refers to the new instance of the 
+  freshly constructed  object. This probably makes up another 17% of the "this" keyword use cases. 
+
+  4. Explicit binding of the "this" keyword is by far the most niche and confusing use case of said keyword. JS allows 
+  developers to call call(), apply(), or bind() to explicitly and definitively bind a certain object ("this") to the keyword 
+  in the context of a given function. The system will know that any time that function is called, it's referring to the "this" 
+  that was explicitly bound in a previous statement. 
 */
 
 
