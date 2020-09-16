@@ -94,7 +94,7 @@ Car.prototype.fill = function(gallons) {
   this.tank += gallons;
 };
 Car.prototype.drive = function(distance) {
-  const fuelUsed = this.milesPerGallon * distance;
+  const fuelUsed =  distance / this.milesPerGallon;
   if (this.tank >= fuelUsed) {
     this.tank = this.tank - fuelUsed;
     this.odometer += distance;
@@ -106,6 +106,28 @@ Car.prototype.drive = function(distance) {
     
   }
 };
+// let batmobile = new Car('BatMobile', 20);
+// console.log(batmobile);
+// console.log(batmobile.model);
+// console.log(batmobile.milesPerGallon);
+// console.log(batmobile.tank);
+// console.log(batmobile.odometer);
+// batmobile.fill(10);
+// console.log(batmobile.tank);
+// batmobile.fill(10);
+// console.log(batmobile.tank);
+// batmobile.fill(10);
+// console.log(batmobile.tank);
+// batmobile.drive(50);
+// console.log(batmobile.odometer);
+// // batmobile.fill(10);
+// batmobile.tank = 10;
+// console.log(batmobile.tank);
+// batmobile.drive(100);
+// console.log(batmobile.tank);
+
+
+
 
 /*
   * TASK 3
